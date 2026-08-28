@@ -25,6 +25,7 @@ The strict check rejects unresolved markers and excessive bullet counts. It does
 - Use semantic text, real lists, selectable text, A4 print CSS, restrained grayscale styling, and no skill bars or decorative charts.
 - Do not hide overflow or shrink text below a readable size to force one page.
 - Omit empty sections rather than printing empty headings.
+- Keep the output ATS parse-safe: single column, no layout tables, no text inside images/icons, no text boxes, selectable text, and standard section headings. See the ATS parse-safety checklist in `references/jd-ranking.md`.
 
 ## PDF handoff
 

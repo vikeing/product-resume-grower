@@ -14,7 +14,7 @@ Expand each selected claim using:
 6. result or current stage;
 7. limitation and next iteration.
 
-Generate follow-ups on ownership, alternatives, metrics, failure modes, product–engineering boundaries, domain logic, and what the candidate would change.
+Generate follow-ups on ownership, alternatives, metrics, failure modes, product–engineering boundaries, domain logic, and what the candidate would change. Reuse the per-bullet follow-up probes already produced by the interview follow-up defense test in `references/resume-writing.md`: the resume, portfolio, and interview must answer the same probes with the same evidence, never a stronger one.
 
 When evidence lacks outcome metrics, prepare a direct answer that names the current delivery stage and uses scale, quality, closure, or validation evidence instead.
 

@@ -29,7 +29,7 @@ Select a balanced subset:
 2. **Product judgment**: key decision + flow/state/rule/exception design + value.
 3. **Delivery**: artifacts + collaboration + verified delivery stage.
 4. **Data/validation**: data source + method + finding/decision.
-5. **Differentiation**: AI boundary, risk strategy, payment depth, or another JD-relevant signal.
+5. **Differentiation**: the chosen customizable focus (AI boundary, growth experiment, data/metric ownership, or a user-defined focus) or another JD-relevant signal. Use one primary focus per resume.
 
 ## Chinese style
 
@@ -59,6 +59,36 @@ Combine small tasks only when they share one business objective and capability. 
 
 Keep evidence-rich domain terms only when they improve target-role fit. Remove jargon that does not prove a decision, delivery, or result.
 
+## Interview follow-up defense (anti-fragile bullets)
+
+A resume is rarely rejected only at screening; it collapses in the interview when a claim cannot survive one follow-up question ("这个数据怎么来的？" "你说的'推动'具体推动了谁？"). Every bullet must be defensible, not just readable. Apply this test to each bullet before it is allowed into the resume.
+
+### Procedure
+
+1. For each drafted bullet, generate 2–3 likely follow-up probes an interviewer would ask. Cover at least:
+   - **Metric provenance**: where the number came from, how it was measured, over what window, and the baseline.
+   - **Ownership reality**: who did what, who else was involved, and what "推动/主导/负责" concretely meant for this candidate.
+   - **Decision depth**: alternatives considered, the tradeoff, and why this option won.
+   - **Delivery/stage truth**: whether it launched, the real stage, and the candidate's part in it.
+2. Answer each probe using only the evidence card. The answer must not introduce any fact stronger than the card.
+3. Grade the bullet:
+   - **Defensible**: every probe has a truthful, evidence-backed answer. Keep the wording.
+   - **Partly defensible**: some probes can only be answered by softening scope, ownership, or metric. Downgrade the wording to what is defensible.
+   - **Indefensible**: a core probe cannot be answered from the card. Downgrade to the strongest verifiable claim, or remove the bullet.
+
+### Downgrade ladder
+
+When a probe cannot be answered, move down one rung rather than deleting valuable content:
+
+- unverifiable metric → measurable scope or delivery milestone;
+- "推动/主导" that cannot name who/what was moved → accurate ownership verb (梳理/设计/参与) with concrete artifact;
+- "上线并带来 X 效果" without proof → confirmed delivery stage + intended goal, clearly separated from observed impact;
+- implied individual credit on team work → explicit co-ownership boundary.
+
+### Output
+
+When drafting, attach a short defense note per bullet (probes + one-line answers or the downgrade applied). Store durable probes and answers in the evidence card's `面试与作品集提示` section so the same bullet stays defensible across resume, portfolio, and interview.
+
 ## Final audit
 
 Check:
@@ -69,4 +99,5 @@ Check:
 - no confidential details leak;
 - bullets cover distinct capabilities;
 - the page is not a work log;
+- every bullet passed the interview follow-up defense test (2–3 probes each, all answerable from the card or the wording was downgraded);
 - the resume remains explainable under interview follow-up.

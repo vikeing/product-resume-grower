@@ -55,16 +55,56 @@ Look for:
 
 Reject page-only narratives that do not explain the underlying payment state or business flow.
 
+## Growth product module
+
+Look for:
+
+- the target metric (activation, retention, conversion, referral, revenue) and its position in the funnel/lifecycle;
+- the specific stage or drop-off the work addressed, and how it was located;
+- hypothesis, the change made, and the mechanism expected to move the metric;
+- experiment design: A/B or holdout, segment, sample, duration, and the primary metric plus guardrails;
+- read of the result: lift vs. noise, statistical or practical significance, and the ship/kill/iterate decision;
+- differentiation between correlation and the candidate's causal contribution.
+
+Reject claims that attribute a metric swing to the candidate's change without an experiment, baseline, or plausible mechanism. Do not present seasonal or campaign-driven movement as product-driven impact.
+
+## Data product module
+
+Look for:
+
+- the decision or product question the data work served;
+- metric definition: what was measured, the exact formula, the event/source, and the time window;
+- data source, collection/tracking setup, cleaning, and known quality limits;
+- analysis method (funnel, cohort, segmentation, correlation) and why it fits the question;
+- the finding, its confidence and caveats, and the product decision it drove;
+- dashboards, tracking specs, or metric systems the candidate defined or owned.
+
+Reject vanity metrics with no decision attached, undefined or shifting metric definitions, and analysis presented without its data-quality limits. Do not confuse pulling a number with owning a metric.
+
+## Customizable differentiation focus
+
+The resume's differentiation bullet(s) are configurable. Choose the focus that best fits the target JD from:
+
+- **AI** — apply the AI product module.
+- **Growth** — apply the growth product module.
+- **Data** — apply the data product module.
+- **Custom** — a user-defined focus (e.g., 出海/国际化, B端效率, 内容生态, 特定行业 domain depth). When custom, first evaluate it through the general product core; only surface differentiation the candidate has real evidence for, and hold it to the same fact gates as every other module.
+
+Pick the focus per target role; do not stack every module onto one resume. Keep the underlying facts unchanged and change only selection, ordering, and emphasis. The general product core always applies underneath the chosen focus.
+
 ## Module combinations
 
 | Target | Modules |
 | --- | --- |
 | General product | General core |
 | AI product | General + AI |
+| Growth product | General + Growth |
+| Data product | General + Data |
 | Risk product | General + Risk |
 | Payment product | General + Payment |
 | AI risk product | General + AI + Risk |
 | Payment risk product | General + Payment + Risk |
 | Fintech product | General + Payment + Risk; add AI only when supported by the JD |
+| Custom-focus product | General + one user-defined differentiation focus |
 
-Keep underlying facts unchanged across variants. Change selection, ordering, and emphasis only.
+Keep underlying facts unchanged across variants. Change selection, ordering, and emphasis only. Choose one primary differentiation focus per resume rather than stacking every module.

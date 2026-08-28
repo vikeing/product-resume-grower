@@ -11,7 +11,7 @@ Extract:
 - domain and tool keywords;
 - likely interview probes.
 
-Separate explicit JD facts from interpretation.
+Separate explicit JD facts from interpretation. Keep the extracted domain and tool keywords as an explicit list; they are reused later for ATS keyword coverage, not only for the internal capability map.
 
 ## Admission gate
 
@@ -50,7 +50,34 @@ Return these fields when comparing against a JD:
 - module/capability
 - evidence grade and risk
 - strength
+- ATS keyword hit: does the JD's exact term (not a synonym or paraphrase) appear verbatim in the resume text? mark hit / synonym-only / missing
 - resume action: keep, strengthen, compress, move, or delete
 - interview risk or missing proof
 
 Do not generate a tailored final resume until the user asks. Keep the general master and JD-specific versions separate.
+
+## ATS keyword coverage
+
+Applicant tracking systems often filter on exact keyword matches before a human reads the resume. A close synonym can score as a miss. After building the fit matrix:
+
+1. Take the JD's high-frequency domain and tool keywords (job title variants, core skills, tools, domain terms).
+2. Check whether each appears verbatim in the resume text, not only as a paraphrase.
+3. For any missing high-priority keyword, only add it when the candidate has real, truthful evidence for it. Prefer inserting the exact term into an existing bullet or the skills line where it is accurate; never keyword-stuff, never claim a tool or domain the candidate has not actually used.
+4. When the JD term and the candidate's honest wording genuinely differ, include both once (e.g., 真实措辞 with the JD's exact term in parentheses) rather than replacing a truthful term with an unearned one.
+
+Report keyword coverage as hit / synonym-only / missing, and flag any keyword that cannot be truthfully claimed as a real gap, not a wording fix.
+
+## ATS parse-safety checklist
+
+Layout choices can make an ATS drop content it cannot parse. Verify the resume avoids parser traps:
+
+- single-column layout only; no two-column or side-by-side blocks that scramble reading order;
+- no text inside images, icons, logos, or graphics (ATS cannot read them);
+- no text boxes or floating shapes; keep body text in the normal document flow;
+- no tables for layout; key facts (title, dates, skills) must be real inline/selectable text, not table cells that may be flattened or reordered;
+- selectable, real text throughout; no scanned or rasterized text;
+- standard section headings (Education, Experience, Projects, Skills) so the parser can segment the resume;
+- contact details as plain text, not only inside a header/footer that some parsers ignore;
+- standard fonts and simple bullet characters; avoid decorative glyphs.
+
+The existing `assets/one-page-product-resume.html` single-column, no-photo template already satisfies these; use this checklist whenever content or layout changes.

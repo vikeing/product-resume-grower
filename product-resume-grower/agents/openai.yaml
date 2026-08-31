@@ -1,6 +1,6 @@
 interface:
   display_name: 产品简历增长器
-  short_description: 面向已有实习经历的学生，沉淀产品经历证据、定制方向（AI/增长/数据/自定义）、通过面试追问与ATS校验的一页实习简历
+  short_description: 面向已有实习经历的学生，沉淀产品经历证据、定制方向（AI/增长/数据/自定义）、通过面试追问与ATS校验的一页实习简历，并支持最终交互精排
   default_prompt: 使用 $product-resume-grower 把我的真实产品经历沉淀为证据卡，并生成适配目标 JD 的一页简历。
   icon_small: assets/icon.svg
   icon_large: assets/icon.svg

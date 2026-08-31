@@ -4,7 +4,7 @@
 >
 > 一套面向已拥有至少一段实习经历的学生的、以职业证据为核心的可迭代简历系统。
 
-[产品介绍页](https://vikeing.github.io/product-resume-grower/) · [下载 Skill v2.0.0](https://vikeing.github.io/product-resume-grower/downloads/product-resume-grower-v2.0.0.zip) · [查看 Skill 源码](./product-resume-grower)
+[产品介绍页](https://vikeing.github.io/product-resume-grower/) · [下载 Skill v2.1.0](https://vikeing.github.io/product-resume-grower/downloads/product-resume-grower-v2.1.0.zip) · [查看 Skill 源码](./product-resume-grower)
 
 ## Why this exists
 
@@ -13,10 +13,30 @@
 Product Resume Grower 将简历写作改造成一条可追溯链路：
 
 ```text
-原始材料 → 项目证据卡 → 事实与风险准入 → JD 匹配 → 一页简历 → 作品集 / 面试故事
+原始材料 → 项目证据卡 → 事实与风险准入 → JD 匹配 → 一页简历 → 交互精排 → 作品集 / 面试故事
 ```
 
 它把简历、作品集和面试故事视为同一个职业证据库的不同视图，让每一次项目复盘都能沉淀为下一次求职的起点。
+
+## What's new in v2.1.0 / v2.1 交互精排
+
+v2.1.0 在 v2.0.0 基础上集成了 [resume-formatter](https://github.com/gracexygu/resume-formatter)（MIT 协议）的交互排版能力，作为最终精排环节。
+
+### 交互精排 HTML 输出
+
+| | v2.0.0 | v2.1.0 |
+|---|---|---|
+| 最终排版 | 静态 HTML，手动微调 | 产出自包含交互 HTML，Chrome 打开即用 |
+| 排版控制 | 无 | 字体/字号/行高/符号/照片/板块顺序/A4 溢出检测 |
+| PDF 导出 | 需外部工具 | Chrome 打印直接导出 |
+
+**工作方式**：Skill 在静态 ATS 安全 HTML 通过保存门后，将简历 JSON 转为 Markdown Schema v2，注入 `assets/typesetting-template.html` 模板的 `DEFAULT_RESUME_MD` 常量，输出一个用户打开即看到自己简历的交互式 HTML。
+
+**定位**：仅用于最终精排，不替代静态 ATS 安全 HTML。静态版本是主交付物，交互版本是视觉打磨的便利层。
+
+- `assets/typesetting-template.html`：自包含交互排版模板（319KB，源自 resume-formatter）
+- `references/html-output.md`：新增"Interactive typesetting output"章节，含 Schema 映射与生成流程
+- `SKILL.md`：新增 Fine-tune typesetting 路由 + Core workflow step 9
 
 ## What's new in v2.0.0 / v2 版本更新
 
@@ -90,10 +110,11 @@ v1 的模块为 AI、风控、支付三选一。v2 扩展为可自定义：
 - **项目筛选机制**：风险与证据等级准入＋五维加权评分＋能力覆盖校正。
 - **版本保护**：改写前明确新版本、覆盖旧版本或仅生成未保存草稿。
 - **最终精品版**：仅保存已确认、完成视觉检查、可直接投递的 HTML/PDF 成品。
+- **交互精排**：静态 HTML 通过后，产出自包含交互 HTML，用户在 Chrome 中微调字体/行高/符号/照片/板块顺序，一键导出 PDF。
 
 ## Install in ChatGPT
 
-1. 下载 [`product-resume-grower-v2.0.0.zip`](https://vikeing.github.io/product-resume-grower/downloads/product-resume-grower-v2.0.0.zip)。
+1. 下载 [`product-resume-grower-v2.1.0.zip`](https://vikeing.github.io/product-resume-grower/downloads/product-resume-grower-v2.1.0.zip)。
 2. 在 ChatGPT 中打开 **Plugins → Skills → Create → Upload from your computer**。
 3. 上传 ZIP，等待扫描完成后安装。
 

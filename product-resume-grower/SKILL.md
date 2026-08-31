@@ -1,6 +1,6 @@
 ---
 name: product-resume-grower
-description: Maintain evidence-first product internship resumes for students who already have at least one product internship, targeting general product, AI, growth, data, risk/compliance, payment, and fintech roles. Use when the user wants to capture or update product experience from notes, PRDs, prototypes, HTML, screenshots, or work samples; audit facts and ownership; compare fit against a JD including ATS keyword coverage; draft or rewrite a one-page Chinese or English resume; generate interview follow-up probes for each bullet; manage resume versions; prepare portfolio or interview stories; or generate and save final HTML/PDF resume artifacts.
+description: Maintain evidence-first product internship resumes for students who already have at least one product internship, targeting general product, AI, growth, data, risk/compliance, payment, and fintech roles. Use when the user wants to capture or update product experience from notes, PRDs, prototypes, HTML, screenshots, or work samples; audit facts and ownership; compare fit against a JD including ATS keyword coverage; draft or rewrite a one-page Chinese or English resume; generate interview follow-up probes for each bullet; manage resume versions; prepare portfolio or interview stories; generate and save final HTML/PDF resume artifacts; or produce an interactive self-contained typesetting HTML for final fine-tuning of fonts, spacing, margins, and A4 overflow before PDF export.
 ---
 
 # Product Resume Grower
@@ -53,6 +53,10 @@ Read `references/interview-and-portfolio.md` plus the relevant role modules. Exp
 
 Read `references/html-output.md`, `references/workflow-and-versioning.md`, and `references/library-structure.md`. Generate HTML from structured content with `scripts/render_resume.py`; use the available PDF/document capability for PDF conversion and visual QA. Save the matched HTML/PDF pair to `最终精品版` only after the user confirms it is final.
 
+### Fine-tune typesetting (interactive)
+
+Read `references/html-output.md`. Only after the static HTML passes the save gate. Convert the finalized resume JSON to Markdown Schema v2, inject it into `assets/typesetting-template.html` by replacing the `DEFAULT_RESUME_MD` constant, and output a self-contained interactive HTML. The user opens it in desktop Chrome to adjust fonts, spacing, margins, bullet symbols, photo, and A4 overflow, then exports the final PDF. This is a convenience layer on top of the static ATS-safe HTML, not a replacement.
+
 ## Core workflow
 
 1. Determine the user's intent and whether it authorizes a write.
@@ -63,6 +67,7 @@ Read `references/html-output.md`, `references/workflow-and-versioning.md`, and `
 6. Run the interview follow-up test on drafted bullets and the ATS keyword/parse checks when a JD is present.
 7. Produce the smallest useful output: evidence card, bullets, fit matrix, draft, interview story, or final artifacts.
 8. Persist only authorized changes and report the changed items.
+9. If the user requests interactive fine-tuning after the static HTML passes the save gate, produce a self-contained typesetting HTML from `assets/typesetting-template.html` with the resume data pre-loaded.
 
 ## Personal evidence and file storage
 
@@ -76,7 +81,8 @@ Keep live personal evidence and resume versions outside this skill in the user's
 - `references/resume-writing.md`: one-page structure, bullet roles, wording, compression, and the interview follow-up defense test.
 - `references/workflow-and-versioning.md`: intent routing, write permissions, and resume version protection.
 - `references/library-structure.md`: modular evidence bank and `最终精品版` organization.
-- `references/html-output.md`: structured resume data, HTML generation, PDF handoff, and QA.
+- `references/html-output.md`: structured resume data, HTML generation, PDF handoff, QA, and interactive typesetting output.
 - `references/interview-and-portfolio.md`: evidence-consistent portfolio and interview expansion.
-- `assets/`: human-readable bank templates and the one-page ATS HTML template.
+- `assets/`: human-readable bank templates, the one-page ATS HTML template, and the interactive typesetting template.
+- `assets/typesetting-template.html`: self-contained interactive typesetting HTML (derived from resume-formatter, MIT). Used only for final fine-tuning after the static HTML passes the save gate.
 - `scripts/render_resume.py`: deterministic structured JSON to HTML renderer and basic final checks.
